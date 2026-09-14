@@ -95,7 +95,7 @@ html = html.replace(
 html = html.replace(/\$\{API\}\/img\//g, "img/");
 html = html.replace(
 	"Prices refresh every 5 min · page auto-refreshes every 30 s",
-	"Prices auto-refresh via GitHub Actions (~15 min) · page re-checks every 30 s",
+	"Prices auto-refresh every ~5 min · page re-checks every 30 s",
 );
 fs.writeFileSync(new URL("index.html", OUT), html);
 
