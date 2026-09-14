@@ -97,6 +97,7 @@ html = html.replace(
 	"Prices refresh every 5 min · page auto-refreshes every 30 s",
 	"Prices auto-refresh every ~5 min · page re-checks every 30 s",
 );
+html = html.replace("— server may be down", "— check your connection");
 fs.writeFileSync(new URL("index.html", OUT), html);
 
 // xlsx
