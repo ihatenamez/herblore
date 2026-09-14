@@ -1,16 +1,11 @@
 name: Update prices (GitHub Pages)
 
-# Refreshes the baked-in prices on a schedule and re-commits the static site.
-# GitHub Pages is static-only, so this is what keeps the site "live": each run
-# fetches the latest OSRS wiki prices, rebuilds state.json + the xlsx, and
-# commits the result (Pages then serves the new files).
-#
-# Note: GitHub throttles scheduled workflows to roughly every 15–20 min on the
-# free tier, so use */15 (not */5).
+# Manual fallback only. Normal updates come from the local server (server.mjs
+# runs push_site.mjs after every 5-min price cycle), because GitHub throttles
+# scheduled workflows on the free tier and the */15 cron effectively never ran.
+# Use "Run workflow" below if the local machine is down.
 
 on:
-  schedule:
-    - cron: "*/15 * * * *"
   workflow_dispatch: {}
 
 permissions:

@@ -83,6 +83,8 @@ function stateJson() {
 }
 
 // ---------- price update loop (same as run_live.mjs) ----------
+// After each successful price update, push the rebuilt static site to GitHub
+// (Pages) so the public site stays fresh every 5 min (see push_site.mjs).
 let updating = false;
 function runCycle() {
 	if (updating) return;
@@ -94,10 +96,25 @@ function runCycle() {
 	child.stdout.on("data", (d) => (out += d));
 	child.stderr.on("data", (d) => (out += d));
 	child.on("close", () => {
-		updating = false;
+		const ok = child.exitCode === 0;
 		console.log(`[update ${new Date().toISOString()}] exit ${child.exitCode}`);
 		const tail = out.trim().split("\n").slice(-3).join(" | ");
 		if (tail) console.log("    " + tail);
+		if (ok) {
+			const push = spawn(process.execPath, [new URL("./push_site.mjs", HERE).pathname], {
+				stdio: ["ignore", "pipe", "pipe"],
+			});
+			let pout = "";
+			push.stdout.on("data", (d) => (pout += d));
+			push.stderr.on("data", (d) => (pout += d));
+			push.on("close", () => {
+				updating = false;
+				const ptail = pout.trim().split("\n").slice(-2).join(" | ");
+				if (ptail) console.log("    [push] " + ptail);
+			});
+		} else {
+			updating = false;
+		}
 	});
 }
 

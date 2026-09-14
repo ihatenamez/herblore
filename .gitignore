@@ -5,6 +5,9 @@ cloudflared
 cloudflared.log
 server.log
 
+# GitHub token (NEVER commit this — repo is public)
+.token
+
 # OS
 .DS_Store
 
