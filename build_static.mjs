@@ -18,7 +18,7 @@ import fs from "node:fs";
 import { buildRow, profitFor, tax } from "./model.mjs";
 
 const HERE = new URL(".", import.meta.url);
-const OUT = new URL("./public/", HERE);
+const OUT = new URL("./docs/", HERE);
 
 const POTIONS = JSON.parse(fs.readFileSync(new URL("./potions_final.json", HERE), "utf8"));
 const IMAGES = JSON.parse(fs.readFileSync(new URL("./images.json", HERE), "utf8"));
@@ -107,4 +107,4 @@ for (const f of fs.readdirSync(imgDir)) {
 }
 
 const n = Object.keys(stateJson().prices).length;
-console.log(`wrote static site to public/ (${n} priced items, ${POTIONS.length} potions)`);
+console.log(`wrote static site to docs/ (${n} priced items, ${POTIONS.length} potions)`);

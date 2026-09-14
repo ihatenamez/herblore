@@ -20,7 +20,7 @@ herblore potions**, re-ranking automatically as Grand Exchange prices change.
 | Price fetcher | `update_prices.mjs` | pulls OSRS wiki median prices |
 | Workbook | `gen_workbook.mjs` → `herblore_top8.xlsx` | 3 sheets (Top 8 / Recipes / Prices) |
 | Live server | `server.mjs` | localhost dashboard + 5-min update loop |
-| **Static build** | `build_static.mjs` → `public/` | GitHub Pages site (data baked into `state.json`) |
+| **Static build** | `build_static.mjs` → `docs/` | GitHub Pages site (data baked into `state.json`) |
 | **Auto-updater** | `.github/workflows/update.yml` | refreshes prices on a schedule |
 
 ## Deploy to GitHub Pages
@@ -36,10 +36,9 @@ herblore potions**, re-ranking automatically as Grand Exchange prices change.
    ```
 
 2. **Enable Pages**: repo → *Settings* → *Pages* → *Source* = **Deploy from a
-   branch** → branch `main`, folder **`/root` (or `public`)**.
-   - If you point Pages at the **`public/`** folder, the site is served from
-     `https://<you>.github.io/herblore-top8/`.
-   - (The `public/` folder is already committed and rebuilt by the workflow.)
+   branch** → branch `main`, folder **`/docs`**.
+   - The site is served from `https://<you>.github.io/herblore-top8/`.
+   - (The `docs/` folder is already committed and rebuilt by the workflow.)
 
 3. **Live updates**: the `update.yml` workflow runs every ~15 min, fetches the
    latest OSRS wiki prices, rebuilds `state.json` + the xlsx, and commits. Pages
@@ -61,7 +60,7 @@ Rebuild artifacts manually:
 ```bash
 node update_prices.mjs        # refresh prices_live.json
 node gen_workbook.mjs         # rebuild herblore_top8.xlsx
-node build_static.mjs         # rebuild public/ (GitHub Pages site)
+node build_static.mjs         # rebuild docs/ (GitHub Pages site)
 ```
 
 ## Notes
