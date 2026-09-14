@@ -254,7 +254,7 @@ async function refresh() {
       "refresh failed: " + e.message +
       (location.protocol === "file:"
         ? " — is the server running? (node server.mjs 8042)"
-        : " — server may be down");
+        : " — check your connection");
   }
 }
 
