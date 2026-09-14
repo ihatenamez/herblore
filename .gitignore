@@ -1,0 +1,24 @@
+# logs + local tunnel (regenerated / machine-specific)
+*.log
+*.jsonl
+cloudflared
+cloudflared.log
+server.log
+
+# OS
+.DS_Store
+
+# dev artifacts (not needed for the Pages site or the update workflow)
+history/
+*.bak
+*.bak2
+calc_rows.json
+latest_fresh.json
+mapping_fresh.json
+potions.json
+potions_profit.json
+dose_ids.json
+unf_ids.json
+
+# keep: public/ (the static site), prices_live.json, herblore_top8.xlsx,
+#       *.mjs (core + dev scripts), potions_final.json, images.json, web/

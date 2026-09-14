@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OSRS Herblore — Top 8 Profitable Potions (live)</title>
+<style>
+  :root {
+    --bg: #0f1420; --panel: #171e2e; --panel2: #1d2639; --border: #2a3550;
+    --text: #e8edf7; --dim: #8b98b8; --gold: #f0c051; --green: #5ec97e;
+    --red: #e06060; --blue: #6aa9ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 16px 60px; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  h1 .coin { color: var(--gold); }
+  .status {
+    display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center;
+    color: var(--dim); font-size: 13px; margin-bottom: 18px;
+  }
+  .status b { color: var(--text); font-weight: 600; }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+         background: var(--green); margin-right: 5px; }
+  .dot.stale { background: var(--gold); }
+  .dot.err { background: var(--red); }
+  .toggles { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 14px; }
+  .toggles label {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px 12px; cursor: pointer; user-select: none; font-size: 14px;
+  }
+  .toggles input { accent-color: var(--gold); margin-right: 6px; }
+  .toggles .hint { color: var(--dim); font-size: 12px; }
+  table { width: 100%; border-collapse: collapse; background: var(--panel);
+          border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+  th, td { padding: 8px 10px; text-align: right; border-bottom: 1px solid var(--border); }
+  th { background: var(--panel2); font-size: 12px; text-transform: uppercase;
+       letter-spacing: .05em; color: var(--dim); position: sticky; top: 0; }
+  td.name, th.name { text-align: left; }
+  tr:last-child td { border-bottom: none; }
+  tr.top td { font-weight: 600; }
+  .rank { color: var(--gold); font-weight: 700; }
+  .pos { color: var(--green); }
+  .neg { color: var(--red); }
+  .na { color: var(--dim); }
+  .ing { color: var(--dim); font-size: 12px; display: block; margin-top: 2px; }
+  .icon { width: 21px; height: auto; vertical-align: middle; margin-right: 7px;
+          border-radius: 3px; }
+  .icon.sm { width: 15px; margin-right: 5px; }
+  section { margin-top: 26px; }
+  section > h2 { font-size: 16px; margin: 0 0 10px; color: var(--blue); }
+  .search { margin: 0 0 10px; }
+  .search input {
+    width: 100%; max-width: 340px; padding: 8px 12px; font-size: 14px;
+    background: var(--panel); color: var(--text); border: 1px solid var(--border);
+    border-radius: 8px; outline: none;
+  }
+  .search input:focus { border-color: var(--blue); }
+  .scroll { max-height: 480px; overflow-y: auto; border-radius: 10px; }
+  .foot { margin-top: 26px; color: var(--dim); font-size: 13px; }
+  .foot a { color: var(--blue); }
+  .btn {
+    display: inline-block; background: var(--panel2); border: 1px solid var(--border);
+    color: var(--text); text-decoration: none; padding: 8px 14px; border-radius: 8px;
+    font-size: 14px; cursor: pointer;
+  }
+  .btn:hover { border-color: var(--blue); }
+  details { margin-top: 26px; }
+  summary { cursor: pointer; color: var(--blue); font-size: 16px; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>OSRS Herblore — <span class="coin">Top 8</span> most profitable potions (live)</h1>
+  <div class="status">
+    <span><span id="dot" class="dot"></span><span id="statusText">loading…</span></span>
+    <span>Last price update: <b id="lastUpdate">—</b></span>
+    <span>Source: <b id="source">—</b></span>
+    <span>Prices auto-refresh via GitHub Actions (~15 min) · page re-checks every 30 s</span>
+    <span style="margin-left:auto">
+      <button class="btn" id="refreshBtn">Refresh now</button>
+      <a class="btn" href="/herblore_top8.xlsx" download>Download .xlsx</a>
+    </span>
+  </div>
+
+  <div class="toggles">
+    <label><input type="checkbox" id="amulet" checked>
+      Alchemist's amulet <span class="hint">(15% chance: 4 doses instead of 3 per craft)</span></label>
+    <label><input type="checkbox" id="goggles" checked>
+      Prescription goggles <span class="hint">(10% chance: secondary not consumed)</span></label>
+  </div>
+
+  <table id="top8">
+    <thead><tr>
+      <th class="name">Rank</th><th class="name">Potion</th><th>Level</th><th>XP</th>
+      <th>Cost to make (per craft)</th><th>Sell price (4)</th><th>Profit / craft</th><th>GP/h</th>
+    </tr></thead>
+    <tbody></tbody>
+  </table>
+
+  <section>
+    <h2>All potions (54)</h2>
+    <div class="search"><input id="filter" type="search" placeholder="Filter by name…"></div>
+    <div class="scroll">
+      <table id="all">
+        <thead><tr>
+          <th class="name">Potion</th><th>Level</th><th>XP</th>
+          <th>Cost</th><th>Sell</th><th>Profit / craft</th><th>GP/h</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <details>
+    <summary>Grand Exchange prices (all 116 items)</summary>
+    <div style="height:12px"></div>
+    <div class="scroll">
+      <table id="prices">
+        <thead><tr>
+          <th class="name">Item</th><th>Buy</th><th>Sell (after 2% GE tax)</th><th>Last updated (UTC)</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </details>
+
+  <div class="foot">
+    One craft = 3 doses; doses are fungible (2×(3) → (4)+(2)), so per-dose value = (sell(4)+sell(2))/6.
+    Profit/craft = doses × (sell(4)+sell(2))/6 − (craft cost − 10%·goggles × secondary cost), where doses = 3 + 15%·amulet.
+    Potions that always make 4 doses (antidote+, antidote++, anti-venom+, super combat, super antifire) sell as a (4) and aren't amulet-boosted;
+    guthix rest always makes 3; the amulet does not work on components (haemostatic poultice, weapon poison);
+    goggles don't save serum 207 ashes.
+    Sell price is after the 2% Grand Exchange tax (capped at 5M).
+    GP/h = profit/craft × crafts/hour; crafting speed from the OSRS wiki (2 ticks/craft, 1 tick = 0.6 s → 3000 crafts/h; Guthix rest 1 tick → 6000).
+    Untradeable potions (Surge, Sanfew) can't be priced and are excluded from rankings.
+    <br><br>
+    Data: OSRS price API via Jina (fallback: OSRS wiki median prices) ·
+    <a href="/api/state">/api/state</a> ·
+    <a href="/herblore_top8.xlsx">herblore_top8.xlsx</a>
+  </div>
+</div>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const fmt = (n) => n == null ? "—" : Math.round(n).toLocaleString("en-US");
+
+function profitOf(row) {
+  if (!row.pricable) return null;
+  const a = $("#amulet").checked ? 1 : 0;
+  const g = $("#goggles").checked ? 1 : 0;
+  // per-dose revenue: doses are fungible (2x(3) -> (4)+(2)), so per-dose value
+  // = (sell4 + sell2)/6. always-4 potions sell as a (4); single items sell at
+  // their own price (no dose variants).
+  let revenue;
+  if (row.type === "always4" || row.type === "single") {
+    revenue = row.sell;
+  } else if (row.type === "always3") {
+    revenue = (row.sell + row.sell2) / 2;
+  } else {
+    revenue = (3 + 0.15 * a) * (row.sell + row.sell2) / 6;
+  }
+  const cost = row.craftCost - 0.1 * g * row.gogglesSave * row.craftSec;
+  return revenue - cost;
+}
+
+// GP/hour = profit/craft * crafts/hour. Crafting speed from the OSRS wiki
+// ("ticks" in each potion's Creation section): 2 ticks/craft for every potion
+// except Guthix rest (1 tick). 1 tick = 0.6s -> 3000 crafts/h (most) or 6000.
+function gpHOf(row) {
+  const profit = profitOf(row);
+  if (profit == null) return null;
+  const ticks = row.name === "Guthix rest(4)" ? 1 : 2;
+  return profit * (3600 / (ticks * 0.6));
+}
+
+function renderTop8() {
+  const rows = state.potions
+    .map((r) => ({ ...r, profit: profitOf(r) }))
+    .filter((r) => r.profit != null)
+    .sort((x, y) => y.profit - x.profit)
+    .slice(0, 8);
+  $("#top8 tbody").innerHTML = rows.map((r, i) => `
+    <tr class="top">
+      <td class="name rank">${i + 1}</td>
+      <td class="name">${r.img ? `<img class="icon" src="${API}/img/${encodeURIComponent(r.img)}" alt="">` : ""}${r.name}
+        <span class="ing">${r.ingredients.map((x) => x.name + " ×" + x.qty).join(" + ")}</span>
+      </td>
+      <td>${r.level}</td><td>${r.xp}</td>
+      <td>${fmt(r.cost)}</td><td>${fmt(r.sell)}</td>
+      <td class="${r.profit >= 0 ? "pos" : "neg"}">${fmt(r.profit)}</td>
+      <td class="${r.profit >= 0 ? "pos" : "neg"}">${fmt(gpHOf(r))}</td>
+    </tr>`).join("");
+}
+
+function renderAll() {
+  const q = $("#filter").value.trim().toLowerCase();
+  const rows = state.potions
+    .map((r) => ({ ...r, profit: profitOf(r) }))
+    .filter((r) => !q || r.name.toLowerCase().includes(q))
+    .sort((a, b) => (b.profit ?? -Infinity) - (a.profit ?? -Infinity));
+  $("#all tbody").innerHTML = rows.map((r) => `
+    <tr>
+      <td class="name">${r.img ? `<img class="icon" src="${API}/img/${encodeURIComponent(r.img)}" alt="">` : ""}${r.name}${r.pricable ? "" : ' <span class="na">(untradeable)</span>'}</td>
+      <td>${r.level}</td><td>${r.xp}</td>
+      <td>${fmt(r.cost)}</td><td>${fmt(r.sell)}</td>
+      <td class="${r.profit == null ? "na" : r.profit >= 0 ? "pos" : "neg"}">${r.profit == null ? "—" : fmt(r.profit)}</td>
+      <td class="${r.profit == null ? "na" : r.profit >= 0 ? "pos" : "neg"}">${r.profit == null ? "—" : fmt(gpHOf(r))}</td>
+    </tr>`).join("");
+}
+
+function renderPrices() {
+  const rows = Object.entries(state.prices)
+    .filter(([, v]) => v.buy != null)
+    .sort((a, b) => a[0].localeCompare(b[0]));
+  $("#prices tbody").innerHTML = rows.map(([name, v]) => `
+    <tr>
+      <td class="name">${v.img ? `<img class="icon sm" src="${API}/img/${encodeURIComponent(v.img)}" alt="">` : ""}${name}</td>
+      <td>${fmt(v.buy)}</td><td>${fmt(v.sell)}</td>
+      <td>${v.updated ? v.updated.replace("T", " ").slice(0, 16) : "—"}</td>
+    </tr>`).join("");
+}
+
+function renderStatus() {
+  const dot = $("#dot");
+  if (!state) { dot.className = "dot err"; $("#statusText").textContent = "no data"; return; }
+  const ageMs = Date.now() - new Date(state.lastPriceUpdate).getTime();
+  const ageMin = Math.round(ageMs / 60000);
+  dot.className = "dot" + (ageMin > 15 ? " stale" : "");
+  $("#statusText").textContent =
+    ageMin < 1 ? "prices fresh (<1 min old)" : `prices ${ageMin} min old`;
+  $("#lastUpdate").textContent = state.lastPriceUpdate
+    ? state.lastPriceUpdate.replace("T", " ").slice(0, 16) + " UTC" : "—";
+  $("#source").textContent =
+    state.source === "price-api" ? "OSRS price API (buy=low, sell=high)"
+    : state.source === "wiki-median" ? "OSRS wiki median"
+    : state.source || "—";
+}
+
+function render() { renderStatus(); renderTop8(); renderAll(); renderPrices(); }
+
+async function refresh() {
+  try {
+    const r = await fetch("state.json", { cache: "no-store" });
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    state = await r.json();
+    render();
+  } catch (e) {
+    $("#dot").className = "dot err";
+    $("#statusText").textContent =
+      "refresh failed: " + e.message +
+      (location.protocol === "file:"
+        ? " — is the server running? (node server.mjs 8042)"
+        : " — server may be down");
+  }
+}
+
+$("#refreshBtn").addEventListener("click", refresh);
+$("#amulet").addEventListener("change", () => { renderTop8(); renderAll(); });
+$("#goggles").addEventListener("change", () => { renderTop8(); renderAll(); });
+$("#filter").addEventListener("input", renderAll);
+refresh();
+setInterval(refresh, 30000);
+</script>
+</body>
+</html>

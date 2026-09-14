@@ -1,0 +1,53 @@
+name: Update prices (GitHub Pages)
+
+# Refreshes the baked-in prices on a schedule and re-commits the static site.
+# GitHub Pages is static-only, so this is what keeps the site "live": each run
+# fetches the latest OSRS wiki prices, rebuilds state.json + the xlsx, and
+# commits the result (Pages then serves the new files).
+#
+# Note: GitHub throttles scheduled workflows to roughly every 15–20 min on the
+# free tier, so use */15 (not */5).
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Fetch latest prices. If the wiki is unreachable, keep the cached prices
+      # (don't fail the run).
+      - name: Fetch latest prices
+        run: node update_prices.mjs || echo "::warning::price fetch failed, keeping cached prices"
+
+      - name: Regenerate workbook
+        run: node gen_workbook.mjs
+
+      - name: Build static site
+        run: node build_static.mjs
+
+      - name: Commit + push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add prices_live.json herblore_top8.xlsx public/
+          if git diff --cached --quiet; then
+            echo "no price changes — nothing to commit"
+          else
+            git commit -m "prices: $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi

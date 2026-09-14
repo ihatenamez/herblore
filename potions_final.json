@@ -1,0 +1,1261 @@
+[
+  {
+    "name": "Attack potion(4)",
+    "id": 2428,
+    "level": 3,
+    "xp": 25,
+    "ingredients": [
+      {
+        "name": "guam potion (unf)",
+        "id": 91,
+        "qty": 1
+      },
+      {
+        "name": "Eye of newt",
+        "qty": 1,
+        "id": 221
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 123,
+    "single": false
+  },
+  {
+    "name": "Antipoison(4)",
+    "id": 2446,
+    "level": 5,
+    "xp": 37.5,
+    "ingredients": [
+      {
+        "name": "marrentill potion (unf)",
+        "id": 93,
+        "qty": 1
+      },
+      {
+        "name": "Unicorn horn dust",
+        "qty": 1,
+        "id": 235
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 177,
+    "single": false
+  },
+  {
+    "name": "Strength potion(4)",
+    "id": 113,
+    "level": 12,
+    "xp": 50,
+    "ingredients": [
+      {
+        "name": "tarromin potion (unf)",
+        "id": 95,
+        "qty": 1
+      },
+      {
+        "name": "Limpwurt root",
+        "qty": 1,
+        "id": 225
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 117,
+    "single": false
+  },
+  {
+    "name": "Serum 207 (4)",
+    "id": 3408,
+    "level": 15,
+    "xp": 50,
+    "ingredients": [
+      {
+        "name": "tarromin potion (unf)",
+        "id": 95,
+        "qty": 1
+      },
+      {
+        "name": "Ashes",
+        "qty": 1,
+        "id": 592
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 3412,
+    "single": false
+  },
+  {
+    "name": "Guthix rest(4)",
+    "id": 4417,
+    "level": 18,
+    "xp": 59,
+    "ingredients": [
+      {
+        "name": "Cup of hot water",
+        "qty": 1,
+        "id": 4460
+      },
+      {
+        "name": "Guam leaf",
+        "qty": 2,
+        "id": 249
+      },
+      {
+        "name": "Harralander",
+        "qty": 1,
+        "id": 255
+      },
+      {
+        "name": "Marrentill",
+        "qty": 1,
+        "id": 251
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 4421,
+    "single": false
+  },
+  {
+    "name": "Compost potion(4)",
+    "id": 6470,
+    "level": 22,
+    "xp": 60,
+    "ingredients": [
+      {
+        "name": "harralander potion (unf)",
+        "id": 97,
+        "qty": 1
+      },
+      {
+        "name": "Volcanic ash",
+        "qty": 1,
+        "id": 21622
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 6474,
+    "single": false
+  },
+  {
+    "name": "Restore potion(4)",
+    "id": 2430,
+    "level": 22,
+    "xp": 62.5,
+    "ingredients": [
+      {
+        "name": "harralander potion (unf)",
+        "id": 97,
+        "qty": 1
+      },
+      {
+        "name": "Red spiders' eggs",
+        "qty": 1,
+        "id": 223
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 129,
+    "single": false
+  },
+  {
+    "name": "Guthix balance(4)",
+    "id": 7660,
+    "level": 22,
+    "xp": 50,
+    "ingredients": [
+      {
+        "name": "Restore potion(4)",
+        "qty": 1,
+        "id": 2430
+      },
+      {
+        "name": "Garlic",
+        "qty": 1,
+        "id": 1550
+      },
+      {
+        "name": "Silver dust",
+        "qty": 1,
+        "id": 7650
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 7664,
+    "single": false
+  },
+  {
+    "name": "Energy potion(4)",
+    "id": 3008,
+    "level": 26,
+    "xp": 67.5,
+    "ingredients": [
+      {
+        "name": "harralander potion (unf)",
+        "id": 97,
+        "qty": 1
+      },
+      {
+        "name": "Chocolate dust",
+        "qty": 1,
+        "id": 1975
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 3012,
+    "single": false
+  },
+  {
+    "name": "Defence potion(4)",
+    "id": 2432,
+    "level": 30,
+    "xp": 75,
+    "ingredients": [
+      {
+        "name": "ranarr potion (unf)",
+        "id": 99,
+        "qty": 1
+      },
+      {
+        "name": "White berries",
+        "qty": 1,
+        "id": 239
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 135,
+    "single": false
+  },
+  {
+    "name": "Agility potion(4)",
+    "id": 3032,
+    "level": 34,
+    "xp": 80,
+    "ingredients": [
+      {
+        "name": "toadflax potion (unf)",
+        "id": 3002,
+        "qty": 1
+      },
+      {
+        "name": "Toad's legs",
+        "qty": 1,
+        "id": 2152
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 3036,
+    "single": false
+  },
+  {
+    "name": "Combat potion(4)",
+    "id": 9739,
+    "level": 36,
+    "xp": 84,
+    "ingredients": [
+      {
+        "name": "harralander potion (unf)",
+        "id": 97,
+        "qty": 1
+      },
+      {
+        "name": "Goat horn dust",
+        "qty": 1,
+        "id": 9736
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 9743,
+    "single": false
+  },
+  {
+    "name": "Prayer potion(4)",
+    "id": 2434,
+    "level": 38,
+    "xp": 87.5,
+    "ingredients": [
+      {
+        "name": "ranarr potion (unf)",
+        "id": 99,
+        "qty": 1
+      },
+      {
+        "name": "Snape grass",
+        "qty": 1,
+        "id": 231
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 141,
+    "single": false
+  },
+  {
+    "name": "Super attack(4)",
+    "id": 2436,
+    "level": 45,
+    "xp": 100,
+    "ingredients": [
+      {
+        "name": "irit potion (unf)",
+        "id": 101,
+        "qty": 1
+      },
+      {
+        "name": "Eye of newt",
+        "qty": 1,
+        "id": 221
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 147,
+    "single": false
+  },
+  {
+    "name": "Superantipoison(4)",
+    "id": 2448,
+    "level": 48,
+    "xp": 106.25,
+    "ingredients": [
+      {
+        "name": "irit potion (unf)",
+        "id": 101,
+        "qty": 1
+      },
+      {
+        "name": "Unicorn horn dust",
+        "qty": 1,
+        "id": 235
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 183,
+    "single": false
+  },
+  {
+    "name": "Fishing potion(4)",
+    "id": 2438,
+    "level": 50,
+    "xp": 112.5,
+    "ingredients": [
+      {
+        "name": "avantoe potion (unf)",
+        "id": 103,
+        "qty": 1
+      },
+      {
+        "name": "Snape grass",
+        "qty": 1,
+        "id": 231
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 153,
+    "single": false
+  },
+  {
+    "name": "Super energy(4)",
+    "id": 3016,
+    "level": 52,
+    "xp": 117.5,
+    "ingredients": [
+      {
+        "name": "avantoe potion (unf)",
+        "id": 103,
+        "qty": 1
+      },
+      {
+        "name": "Mort myre fungus",
+        "qty": 1,
+        "id": 2970
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 3020,
+    "single": false
+  },
+  {
+    "name": "Hunter potion(4)",
+    "id": 9998,
+    "level": 53,
+    "xp": 120,
+    "ingredients": [
+      {
+        "name": "avantoe potion (unf)",
+        "id": 103,
+        "qty": 1
+      },
+      {
+        "name": "Kebbit teeth dust",
+        "qty": 1,
+        "id": 10111
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 10002,
+    "single": false
+  },
+  {
+    "name": "Goading potion(4)",
+    "id": 30137,
+    "level": 54,
+    "xp": 132,
+    "ingredients": [
+      {
+        "name": "harralander potion (unf)",
+        "id": 97,
+        "qty": 1
+      },
+      {
+        "name": "Aldarium",
+        "qty": 1,
+        "id": 29993
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 30143,
+    "single": false
+  },
+  {
+    "name": "Super strength(4)",
+    "id": 2440,
+    "level": 55,
+    "xp": 125,
+    "ingredients": [
+      {
+        "name": "kwuarm potion (unf)",
+        "id": 105,
+        "qty": 1
+      },
+      {
+        "name": "Limpwurt root",
+        "qty": 1,
+        "id": 225
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 159,
+    "single": false
+  },
+  {
+    "name": "Haemostatic poultice",
+    "id": 31587,
+    "level": 56,
+    "xp": 27,
+    "ingredients": [
+      {
+        "name": "elkhorn potion (unf)",
+        "id": 31662,
+        "qty": 1
+      },
+      {
+        "name": "Squid paste",
+        "qty": 1,
+        "id": 31569
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": null,
+    "single": true
+  },
+  {
+    "name": "Haemostatic dressing (4)",
+    "id": 31590,
+    "level": 56,
+    "xp": 100,
+    "ingredients": [
+      {
+        "name": "Haemostatic poultice",
+        "qty": 1,
+        "id": 31587
+      },
+      {
+        "name": "Cotton yarn",
+        "qty": 1,
+        "id": 31469
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 31596,
+    "single": false
+  },
+  {
+    "name": "Prayer regeneration potion(4)",
+    "id": 30125,
+    "level": 58,
+    "xp": 132,
+    "ingredients": [
+      {
+        "name": "huasca potion (unf)",
+        "id": 30100,
+        "qty": 1
+      },
+      {
+        "name": "Aldarium",
+        "qty": 1,
+        "id": 29993
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 30131,
+    "single": false
+  },
+  {
+    "name": "Weapon poison",
+    "id": 187,
+    "level": 60,
+    "xp": 137.5,
+    "ingredients": [
+      {
+        "name": "kwuarm potion (unf)",
+        "id": 105,
+        "qty": 1
+      },
+      {
+        "name": "Dragon scale dust",
+        "qty": 1,
+        "id": 241
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": null,
+    "single": true
+  },
+  {
+    "name": "Super fishing potion(4)",
+    "id": 31602,
+    "level": 62,
+    "xp": 140.5,
+    "ingredients": [
+      {
+        "name": "pillar potion (unf)",
+        "id": 31665,
+        "qty": 1
+      },
+      {
+        "name": "Haddock eye",
+        "qty": 1,
+        "id": 32357
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 31608,
+    "single": false
+  },
+  {
+    "name": "Super restore(4)",
+    "id": 3024,
+    "level": 63,
+    "xp": 142.5,
+    "ingredients": [
+      {
+        "name": "snapdragon potion (unf)",
+        "id": 3004,
+        "qty": 1
+      },
+      {
+        "name": "Red spiders' eggs",
+        "qty": 1,
+        "id": 223
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 3028,
+    "single": false
+  },
+  {
+    "name": "Sanfew serum(4)",
+    "id": 10925,
+    "level": 65,
+    "xp": 160,
+    "ingredients": [
+      {
+        "name": "Super restore(4)",
+        "qty": 1,
+        "id": 3024
+      },
+      {
+        "name": "Unicorn horn dust",
+        "qty": 1,
+        "id": 235
+      },
+      {
+        "name": "Clean snake weed",
+        "qty": 1,
+        "id": null
+      },
+      {
+        "name": "Nail beast nails",
+        "qty": 1,
+        "id": 10937
+      }
+    ],
+    "altRecipes": [],
+    "pricable": false,
+    "id2": 10929,
+    "single": false
+  },
+  {
+    "name": "Extreme energy potion(4)",
+    "id": 31614,
+    "level": 66,
+    "xp": 84,
+    "ingredients": [
+      {
+        "name": "Super energy(4)",
+        "qty": 1,
+        "id": 3016
+      },
+      {
+        "name": "Yellow fin",
+        "qty": 4,
+        "id": 32360
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 31620,
+    "single": false
+  },
+  {
+    "name": "Super defence(4)",
+    "id": 2442,
+    "level": 66,
+    "xp": 150,
+    "ingredients": [
+      {
+        "name": "cadantine potion (unf)",
+        "id": 107,
+        "qty": 1
+      },
+      {
+        "name": "White berries",
+        "qty": 1,
+        "id": 239
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 165,
+    "single": false
+  },
+  {
+    "name": "Super hunter potion(4)",
+    "id": 31626,
+    "level": 67,
+    "xp": 154,
+    "ingredients": [
+      {
+        "name": "pillar potion (unf)",
+        "id": 31665,
+        "qty": 1
+      },
+      {
+        "name": "Crab paste",
+        "qty": 1,
+        "id": 31708
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 31632,
+    "single": false
+  },
+  {
+    "name": "Antidote+(4)",
+    "id": 5943,
+    "level": 68,
+    "xp": 155,
+    "ingredients": [
+      {
+        "name": "Coconut milk",
+        "qty": 1,
+        "id": 5935
+      },
+      {
+        "name": "Toadflax",
+        "qty": 1,
+        "id": 2998
+      },
+      {
+        "name": "Yew roots",
+        "qty": 1,
+        "id": 6049
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 5947,
+    "single": false
+  },
+  {
+    "name": "Antifire potion(4)",
+    "id": 2452,
+    "level": 69,
+    "xp": 157.5,
+    "ingredients": [
+      {
+        "name": "lantadyme potion (unf)",
+        "id": 2483,
+        "qty": 1
+      },
+      {
+        "name": "Dragon scale dust",
+        "qty": 1,
+        "id": 241
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 2456,
+    "single": false
+  },
+  {
+    "name": "Ranging potion(4)",
+    "id": 2444,
+    "level": 72,
+    "xp": 162.5,
+    "ingredients": [
+      {
+        "name": "dwarf weed potion (unf)",
+        "id": 109,
+        "qty": 1
+      },
+      {
+        "name": "Wine of Zamorak",
+        "qty": 1,
+        "id": 245
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 171,
+    "single": false
+  },
+  {
+    "name": "Weapon poison(+)",
+    "id": 5937,
+    "level": 73,
+    "xp": 190,
+    "ingredients": [
+      {
+        "name": "Coconut milk",
+        "qty": 1,
+        "id": 5935
+      },
+      {
+        "name": "Cactus spine",
+        "qty": 1,
+        "id": 6016
+      },
+      {
+        "name": "Red spiders' eggs",
+        "qty": 1,
+        "id": 223
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": null,
+    "single": true
+  },
+  {
+    "name": "Magic potion(4)",
+    "id": 3040,
+    "level": 76,
+    "xp": 172.5,
+    "ingredients": [
+      {
+        "name": "lantadyme potion (unf)",
+        "id": 2483,
+        "qty": 1
+      },
+      {
+        "name": "Potato cactus",
+        "qty": 1,
+        "id": 3138
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 3044,
+    "single": false
+  },
+  {
+    "name": "Stamina potion(4)",
+    "id": 12625,
+    "level": 77,
+    "xp": 102,
+    "ingredients": [
+      {
+        "name": "Super energy(4)",
+        "qty": 1,
+        "id": 3016
+      },
+      {
+        "name": "Amylase crystal",
+        "qty": 4,
+        "id": 12640
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 12629,
+    "single": false
+  },
+  {
+    "name": "Zamorak brew(4)",
+    "id": 2450,
+    "level": 78,
+    "xp": 175,
+    "ingredients": [
+      {
+        "name": "torstol potion (unf)",
+        "id": 111,
+        "qty": 1
+      },
+      {
+        "name": "Jangerberries",
+        "qty": 1,
+        "id": 247
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 191,
+    "single": false
+  },
+  {
+    "name": "Antidote++(4)",
+    "id": 5952,
+    "level": 79,
+    "xp": 177.5,
+    "ingredients": [
+      {
+        "name": "Coconut milk",
+        "qty": 1,
+        "id": 5935
+      },
+      {
+        "name": "Irit leaf",
+        "qty": 1,
+        "id": 259
+      },
+      {
+        "name": "Magic roots",
+        "qty": 1,
+        "id": 6051
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 5956,
+    "single": false
+  },
+  {
+    "name": "Bastion potion(4)",
+    "id": 22461,
+    "level": 80,
+    "xp": 155,
+    "ingredients": [
+      {
+        "name": "Vial of blood",
+        "qty": 1,
+        "id": 22446
+      },
+      {
+        "name": "Cadantine",
+        "qty": 1,
+        "id": 265
+      },
+      {
+        "name": "Wine of Zamorak",
+        "qty": 1,
+        "id": 245
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 22467,
+    "single": false
+  },
+  {
+    "name": "Battlemage potion(4)",
+    "id": 22449,
+    "level": 80,
+    "xp": 155,
+    "ingredients": [
+      {
+        "name": "Vial of blood",
+        "qty": 1,
+        "id": 22446
+      },
+      {
+        "name": "Cadantine",
+        "qty": 1,
+        "id": 265
+      },
+      {
+        "name": "Potato cactus",
+        "qty": 1,
+        "id": 3138
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 22455,
+    "single": false
+  },
+  {
+    "name": "Saradomin brew(4)",
+    "id": 6685,
+    "level": 81,
+    "xp": 180,
+    "ingredients": [
+      {
+        "name": "toadflax potion (unf)",
+        "id": 3002,
+        "qty": 1
+      },
+      {
+        "name": "Crushed nest",
+        "qty": 1,
+        "id": 6693
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 6689,
+    "single": false
+  },
+  {
+    "name": "Surge potion(4)",
+    "id": null,
+    "level": 81,
+    "xp": 185,
+    "ingredients": [
+      {
+        "name": "torstol potion (unf)",
+        "id": 111,
+        "qty": 1
+      },
+      {
+        "name": "Demonic tallow",
+        "qty": 1,
+        "id": 30800
+      }
+    ],
+    "altRecipes": [],
+    "pricable": false,
+    "id2": 30881,
+    "single": false
+  },
+  {
+    "name": "Extended antifire(4)",
+    "id": 11951,
+    "level": 84,
+    "xp": 110,
+    "ingredients": [
+      {
+        "name": "Antifire potion(4)",
+        "qty": 1,
+        "id": 2452
+      },
+      {
+        "name": "Lava scale shard",
+        "qty": 4,
+        "id": 11994
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 11955,
+    "single": false
+  },
+  {
+    "name": "Ancient brew(4)",
+    "id": 26340,
+    "level": 85,
+    "xp": 190,
+    "ingredients": [
+      {
+        "name": "dwarf weed potion (unf)",
+        "id": 109,
+        "qty": 1
+      },
+      {
+        "name": "Nihil dust",
+        "qty": 1,
+        "id": 26368
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 26344,
+    "single": false
+  },
+  {
+    "name": "Extended stamina potion(4)",
+    "id": 31638,
+    "level": 85,
+    "xp": 110,
+    "ingredients": [
+      {
+        "name": "Stamina potion(4)",
+        "qty": 1,
+        "id": 12625
+      },
+      {
+        "name": "Marlin scales",
+        "qty": 4,
+        "id": 32362
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 31644,
+    "single": false
+  },
+  {
+    "name": "Anti-venom(4)",
+    "id": 12905,
+    "level": 87,
+    "xp": 120,
+    "ingredients": [
+      {
+        "name": "Antidote++(4)",
+        "qty": 1,
+        "id": 5952
+      },
+      {
+        "name": "Zulrah's scales",
+        "qty": 20,
+        "id": 12934
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 12909,
+    "single": false
+  },
+  {
+    "name": "Menaphite remedy(4)",
+    "id": 27202,
+    "level": 88,
+    "xp": 200,
+    "ingredients": [
+      {
+        "name": "dwarf weed potion (unf)",
+        "id": 109,
+        "qty": 1
+      },
+      {
+        "name": "Lily of the Sands",
+        "qty": 1,
+        "id": 27272
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 27208,
+    "single": false
+  },
+  {
+    "name": "Armadyl brew(4)",
+    "id": 31650,
+    "level": 89,
+    "xp": 205,
+    "ingredients": [
+      {
+        "name": "umbral potion (unf)",
+        "id": 31668,
+        "qty": 1
+      },
+      {
+        "name": "Rainbow crab paste",
+        "qty": 1,
+        "id": 31710
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 31656,
+    "single": false
+  },
+  {
+    "name": "Super combat potion(4)",
+    "id": 12695,
+    "level": 90,
+    "xp": 150,
+    "ingredients": [
+      {
+        "name": "Super attack(4)",
+        "qty": 1,
+        "id": 2436
+      },
+      {
+        "name": "Super strength(4)",
+        "qty": 1,
+        "id": 2440
+      },
+      {
+        "name": "Super defence(4)",
+        "qty": 1,
+        "id": 2442
+      },
+      {
+        "name": "Torstol",
+        "qty": 1,
+        "id": 269
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 12699,
+    "single": false
+  },
+  {
+    "name": "Forgotten brew(4)",
+    "id": 27629,
+    "level": 91,
+    "xp": 145,
+    "ingredients": [
+      {
+        "name": "Ancient brew(4)",
+        "qty": 1,
+        "id": 26340
+      },
+      {
+        "name": "Ancient essence",
+        "qty": 80,
+        "id": 27616
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 27635,
+    "single": false
+  },
+  {
+    "name": "Super antifire potion(4)",
+    "id": 21978,
+    "level": 92,
+    "xp": 130,
+    "ingredients": [
+      {
+        "name": "Antifire potion(4)",
+        "qty": 1,
+        "id": 2452
+      },
+      {
+        "name": "Crushed superior dragon bones",
+        "qty": 1,
+        "id": 21975
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 21984,
+    "single": false
+  },
+  {
+    "name": "Anti-venom+(4)",
+    "id": 12913,
+    "level": 94,
+    "xp": 125,
+    "ingredients": [
+      {
+        "name": "Anti-venom(4)",
+        "qty": 1,
+        "id": 12905
+      },
+      {
+        "name": "Torstol",
+        "qty": 1,
+        "id": 269
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 12917,
+    "single": false
+  },
+  {
+    "name": "Extended anti-venom+(4)",
+    "id": 29824,
+    "level": 94,
+    "xp": 80,
+    "ingredients": [
+      {
+        "name": "Anti-venom+(4)",
+        "qty": 1,
+        "id": 12913
+      },
+      {
+        "name": "Araxyte venom sac",
+        "qty": 4,
+        "id": 29784
+      }
+    ],
+    "altRecipes": [],
+    "pricable": true,
+    "id2": 29830,
+    "single": false
+  },
+  {
+    "name": "Extended super antifire(4)",
+    "id": 22209,
+    "level": 98,
+    "xp": 160,
+    "ingredients": [
+      {
+        "name": "Super antifire potion(4)",
+        "qty": 1,
+        "id": 21978
+      },
+      {
+        "name": "Lava scale shard",
+        "qty": 4,
+        "id": 11994
+      }
+    ],
+    "altRecipes": [
+      {
+        "name": "Extended antifire(4)",
+        "qty": 1,
+        "id": 11951
+      },
+      {
+        "name": "Crushed superior dragon bones",
+        "qty": 1,
+        "id": 21975
+      }
+    ],
+    "pricable": true,
+    "id2": 22215,
+    "single": false
+  }
+]
