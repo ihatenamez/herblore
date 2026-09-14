@@ -91,6 +91,8 @@ html = html.replace(
 	'const r = await fetch(API + "/api/state", { cache: "no-store" });',
 	'const r = await fetch("state.json", { cache: "no-store" });',
 );
+// image URLs: ${API}/img/... -> img/... (relative, so it works under /herblore/ subpath)
+html = html.replace(/\$\{API\}\/img\//g, "img/");
 html = html.replace(
 	"Prices refresh every 5 min · page auto-refreshes every 30 s",
 	"Prices auto-refresh via GitHub Actions (~15 min) · page re-checks every 30 s",

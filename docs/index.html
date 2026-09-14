@@ -186,7 +186,7 @@ function renderTop8() {
   $("#top8 tbody").innerHTML = rows.map((r, i) => `
     <tr class="top">
       <td class="name rank">${i + 1}</td>
-      <td class="name">${r.img ? `<img class="icon" src="${API}/img/${encodeURIComponent(r.img)}" alt="">` : ""}${r.name}
+      <td class="name">${r.img ? `<img class="icon" src="img/${encodeURIComponent(r.img)}" alt="">` : ""}${r.name}
         <span class="ing">${r.ingredients.map((x) => x.name + " ×" + x.qty).join(" + ")}</span>
       </td>
       <td>${r.level}</td><td>${r.xp}</td>
@@ -204,7 +204,7 @@ function renderAll() {
     .sort((a, b) => (b.profit ?? -Infinity) - (a.profit ?? -Infinity));
   $("#all tbody").innerHTML = rows.map((r) => `
     <tr>
-      <td class="name">${r.img ? `<img class="icon" src="${API}/img/${encodeURIComponent(r.img)}" alt="">` : ""}${r.name}${r.pricable ? "" : ' <span class="na">(untradeable)</span>'}</td>
+      <td class="name">${r.img ? `<img class="icon" src="img/${encodeURIComponent(r.img)}" alt="">` : ""}${r.name}${r.pricable ? "" : ' <span class="na">(untradeable)</span>'}</td>
       <td>${r.level}</td><td>${r.xp}</td>
       <td>${fmt(r.cost)}</td><td>${fmt(r.sell)}</td>
       <td class="${r.profit == null ? "na" : r.profit >= 0 ? "pos" : "neg"}">${r.profit == null ? "—" : fmt(r.profit)}</td>
@@ -218,7 +218,7 @@ function renderPrices() {
     .sort((a, b) => a[0].localeCompare(b[0]));
   $("#prices tbody").innerHTML = rows.map(([name, v]) => `
     <tr>
-      <td class="name">${v.img ? `<img class="icon sm" src="${API}/img/${encodeURIComponent(v.img)}" alt="">` : ""}${name}</td>
+      <td class="name">${v.img ? `<img class="icon sm" src="img/${encodeURIComponent(v.img)}" alt="">` : ""}${name}</td>
       <td>${fmt(v.buy)}</td><td>${fmt(v.sell)}</td>
       <td>${v.updated ? v.updated.replace("T", " ").slice(0, 16) : "—"}</td>
     </tr>`).join("");
